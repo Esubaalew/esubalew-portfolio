@@ -35,12 +35,12 @@ export async function generateOGImage({
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          justifyContent: 'center',
+          justifyContent: 'space-between',
           background: theme.bg,
           fontSize: 32,
           fontWeight: 600,
           color: 'white',
-          padding: '80px',
+          padding: '60px',
           position: 'relative',
         }}
       >
@@ -57,68 +57,94 @@ export async function generateOGImage({
           }}
         />
         
-        {/* Logo */}
+        {/* Top Section with Logo */}
         <div
           style={{
             display: 'flex',
+            flexDirection: 'column',
             alignItems: 'center',
-            justifyContent: 'center',
-            width: '120px',
-            height: '120px',
-            borderRadius: '60px',
-            background: 'rgba(255,255,255,0.2)',
-            border: '3px solid rgba(255,255,255,0.3)',
-            marginBottom: '40px',
-            fontSize: '48px',
-            fontWeight: 'bold',
+            width: '100%',
           }}
         >
-          E.C
-        </div>
-
-        {/* Title */}
-        <div
-          style={{
-            fontSize: subtitle ? '64px' : '72px',
-            fontWeight: 'bold',
-            textAlign: 'center',
-            lineHeight: 1.2,
-            marginBottom: subtitle ? '20px' : '40px',
-            maxWidth: '800px',
-          }}
-        >
-          {title}
-        </div>
-
-        {/* Subtitle */}
-        {subtitle && (
           <div
             style={{
-              fontSize: '36px',
-              fontWeight: 400,
-              textAlign: 'center',
-              opacity: 0.9,
-              marginBottom: '40px',
-              maxWidth: '700px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '100px',
+              height: '100px',
+              borderRadius: '50px',
+              background: 'rgba(255,255,255,0.2)',
+              border: '3px solid rgba(255,255,255,0.3)',
+              marginBottom: '30px',
+              fontSize: '40px',
+              fontWeight: 'bold',
             }}
           >
-            {subtitle}
+            E.C
           </div>
-        )}
+        </div>
+
+        {/* Main Content */}
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flex: 1,
+            width: '100%',
+            textAlign: 'center',
+          }}
+        >
+          {/* Title */}
+          <div
+            style={{
+              fontSize: subtitle ? '52px' : '60px',
+              fontWeight: 'bold',
+              textAlign: 'center',
+              lineHeight: 1.1,
+              marginBottom: subtitle ? '24px' : '0px',
+              maxWidth: '900px',
+              wordWrap: 'break-word',
+            }}
+          >
+            {title}
+          </div>
+
+          {/* Subtitle */}
+          {subtitle && (
+            <div
+              style={{
+                fontSize: '32px',
+                fontWeight: 400,
+                textAlign: 'center',
+                opacity: 0.9,
+                maxWidth: '800px',
+                lineHeight: 1.3,
+                wordWrap: 'break-word',
+              }}
+            >
+              {subtitle}
+            </div>
+          )}
+        </div>
 
         {/* Footer */}
         <div
           style={{
             display: 'flex',
             alignItems: 'center',
-            fontSize: '28px',
+            justifyContent: 'center',
+            fontSize: '24px',
             fontWeight: 500,
             opacity: 0.8,
+            width: '100%',
           }}
         >
-          <span style={{ marginRight: '12px' }}>by</span>
+          <span style={{ marginRight: '8px' }}>by</span>
           <span style={{ fontWeight: 'bold' }}>Esubalew Chekol</span>
-          <span style={{ margin: '0 16px', opacity: 0.6 }}>•</span>
+          <span style={{ margin: '0 12px', opacity: 0.6 }}>•</span>
           <span>esubalew.et</span>
         </div>
       </div>

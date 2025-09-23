@@ -52,6 +52,14 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      {/* Skip Navigation Links */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-primary-foreground px-4 py-2 rounded-md z-50 focus:z-50"
+      >
+        Skip to main content
+      </a>
+      
       {/* Simple Header */}
       <header className="border-b border-border/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-4">
@@ -63,7 +71,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                   Blog
                 </Link>
               </Button>
-              <LogoText />
+              <LogoText asLink />
             </div>
             <div className="flex items-center space-x-4">
               <nav className="flex items-center space-x-6">
@@ -114,7 +122,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
       </div>
 
       {/* Article Content */}
-      <main className="py-12 px-4 sm:px-6">
+      <main id="main-content" className="py-12 px-4 sm:px-6" role="main">
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg dark:prose-invert max-w-none">
             <MarkdownRenderer content={post.content} />

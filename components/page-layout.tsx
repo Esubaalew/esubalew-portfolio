@@ -46,10 +46,18 @@ export function PageLayout({ children, title, description, section, showBackButt
 
   return (
     <div className={`min-h-screen ${theme.bg} text-foreground relative overflow-hidden`}>
+      {/* Skip Navigation Links */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-primary-foreground px-4 py-2 rounded-md z-50 focus:z-50"
+      >
+        Skip to main content
+      </a>
+      
       <MathBackground />
 
       {/* Navigation */}
-      <nav className="border-b border-border/30 backdrop-blur-sm bg-background/10 relative z-10">
+      <nav className="border-b border-border/30 backdrop-blur-sm bg-background/10 relative z-10" role="navigation" aria-label="Main navigation">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
@@ -61,23 +69,26 @@ export function PageLayout({ children, title, description, section, showBackButt
                   </Link>
                 </Button>
               )}
-              <LogoText />
+              <LogoText asLink />
             </div>
             <div className="flex items-center space-x-3">
               <ThemeToggle />
               <Button variant="ghost" size="sm" asChild>
-                <a href="https://github.com/esubaalew" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/esubaalew" target="_blank" rel="noopener noreferrer" aria-label="Visit Esubalew's GitHub profile">
                   <Github className="h-4 w-4" />
+                  <span className="sr-only">GitHub</span>
                 </a>
               </Button>
               <Button variant="ghost" size="sm" asChild>
-                <a href="https://linkedin.com/in/esubaalew" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com/in/esubaalew" target="_blank" rel="noopener noreferrer" aria-label="Visit Esubalew's LinkedIn profile">
                   <Linkedin className="h-4 w-4" />
+                  <span className="sr-only">LinkedIn</span>
                 </a>
               </Button>
               <Button variant="ghost" size="sm" asChild>
-                <a href="https://twitter.com/esubaalew" target="_blank" rel="noopener noreferrer">
+                <a href="https://twitter.com/esubaalew" target="_blank" rel="noopener noreferrer" aria-label="Visit Esubalew's Twitter profile">
                   <Twitter className="h-4 w-4" />
+                  <span className="sr-only">Twitter</span>
                 </a>
               </Button>
             </div>
@@ -153,7 +164,7 @@ export function PageLayout({ children, title, description, section, showBackButt
       </section>
 
       {/* Main content */}
-      <main className="relative z-10">
+      <main id="main-content" className="relative z-10" role="main">
         {children}
       </main>
 

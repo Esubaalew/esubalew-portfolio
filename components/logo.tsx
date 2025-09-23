@@ -55,11 +55,29 @@ export function Logo({ size = 32, className = "" }: LogoProps) {
   )
 }
 
-export function LogoText({ className = "" }: { className?: string }) {
-  return (
-    <div className={`flex items-center space-x-2 ${className}`}>
+export function LogoText({ className = "", asLink = false }: { className?: string; asLink?: boolean }) {
+  const content = (
+    <>
       <Logo size={28} />
       <span className="font-mono text-lg font-medium">esubalew.chekol</span>
+    </>
+  )
+
+  if (asLink) {
+    return (
+      <a 
+        href="/" 
+        className={`flex items-center space-x-2 hover:opacity-80 transition-opacity ${className}`}
+        aria-label="Go to homepage"
+      >
+        {content}
+      </a>
+    )
+  }
+
+  return (
+    <div className={`flex items-center space-x-2 ${className}`}>
+      {content}
     </div>
   )
 }
