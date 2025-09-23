@@ -1,0 +1,26 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "blog.esubalew.et"
+        }
+      ],
+      "destination": "/blog/$1"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/blog",
+      "destination": "https://blog.esubalew.et",
+      "permanent": true
+    },
+    {
+      "source": "/blog/(.*)",
+      "destination": "https://blog.esubalew.et/$1",
+      "permanent": true
+    }
+  ]
+}
