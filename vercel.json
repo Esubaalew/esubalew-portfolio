@@ -11,7 +11,7 @@
       "destination": "/blog"
     },
     {
-      "source": "/(?!blog)(.*)",
+      "source": "/((?!blog).*)",
       "has": [
         {
           "type": "host", 
