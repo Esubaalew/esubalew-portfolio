@@ -128,7 +128,7 @@ export function PageLayout({ children, title, description, section, showBackButt
             <>
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
                 <Button asChild className="w-full sm:w-auto jetbrains-button border-0">
-                  <a href="mailto:hello@esubalew.et">
+                  <a href="mailto:esubalewchekol6@gmail.com">
                     <Mail className="mr-2 h-4 w-4" />
                     Get in touch
                   </a>
@@ -175,10 +175,10 @@ export function PageLayout({ children, title, description, section, showBackButt
             <p className="text-sm text-muted-foreground">© 2024 Esubalew Chekol</p>
             <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
               <a
-                href="mailto:hello@esubalew.et"
+                href="mailto:esubalewchekol6@gmail.com"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                hello@esubalew.et
+                esubalewchekol6@gmail.com
               </a>
               <a
                 href="https://github.com/esubaalew"
