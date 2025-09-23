@@ -2,14 +2,16 @@
   "redirects": [
     {
       "source": "/blog",
-      "destination": "https://blog.esubalew.et/blog",
+      "destination": "https://blog.esubalew.et",
       "permanent": true
     },
     {
       "source": "/blog/(.*)",
-      "destination": "https://blog.esubalew.et/blog/$1",
+      "destination": "https://blog.esubalew.et/$1",
       "permanent": true
-    },
+    }
+  ],
+  "rewrites": [
     {
       "source": "/",
       "has": [
@@ -18,11 +20,8 @@
           "value": "blog.esubalew.et"
         }
       ],
-      "destination": "https://blog.esubalew.et/blog",
-      "permanent": true
-    }
-  ],
-  "rewrites": [
+      "destination": "/blog"
+    },
     {
       "source": "/((?!blog).*)",
       "has": [
