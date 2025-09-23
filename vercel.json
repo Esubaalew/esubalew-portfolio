@@ -1,10 +1,20 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/",
       "has": [
         {
           "type": "host",
+          "value": "blog.esubalew.et"
+        }
+      ],
+      "destination": "/blog"
+    },
+    {
+      "source": "/(?!blog)(.*)",
+      "has": [
+        {
+          "type": "host", 
           "value": "blog.esubalew.et"
         }
       ],
@@ -14,11 +24,23 @@
   "redirects": [
     {
       "source": "/blog",
+      "has": [
+        {
+          "type": "host",
+          "value": "esubalew.et"
+        }
+      ],
       "destination": "https://blog.esubalew.et",
       "permanent": true
     },
     {
       "source": "/blog/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "esubalew.et"
+        }
+      ],
       "destination": "https://blog.esubalew.et/$1",
       "permanent": true
     }
