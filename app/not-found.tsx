@@ -128,10 +128,10 @@ export default function NotFound() {
           </Button>
         </div>
 
-        {/* Easter Egg */}
+        {/* Additional Info */}
         <div className="mt-12 text-center">
-          <p className="text-xs text-gray-500 font-mono">
-            // TODO: Implement teleportation feature
+          <p className="text-xs text-gray-500">
+            Lost? No worries - even the best developers encounter 404s!
           </p>
         </div>
       </div>
