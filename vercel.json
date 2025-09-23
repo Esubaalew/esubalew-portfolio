@@ -6,8 +6,8 @@
       "permanent": true
     },
     {
-      "source": "/blog/(.*)",
-      "destination": "https://blog.esubalew.et/blog/$1",
+      "source": "/blog/:path*",
+      "destination": "https://blog.esubalew.et/blog/:path*",
       "permanent": true
     }
   ],
@@ -23,14 +23,14 @@
       "destination": "/blog"
     },
     {
-      "source": "/((?!blog).*)",
+      "source": "/:path((?!blog/).*)",
       "has": [
         {
-          "type": "host", 
+          "type": "host",
           "value": "blog.esubalew.et"
         }
       ],
-      "destination": "/blog/$1"
+      "destination": "/blog/:path"
     }
   ]
 }
