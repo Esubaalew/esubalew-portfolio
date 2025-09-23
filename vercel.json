@@ -2,12 +2,12 @@
   "redirects": [
     {
       "source": "/blog",
-      "destination": "https://blog.esubalew.et",
+      "destination": "https://blog.esubalew.et/blog",
       "permanent": true
     },
     {
       "source": "/blog/(.*)",
-      "destination": "https://blog.esubalew.et/$1",
+      "destination": "https://blog.esubalew.et/blog/$1",
       "permanent": true
     }
   ],
