@@ -5,26 +5,6 @@ description: "Learn how to use Run-Kit to execute Python, R, JavaScript, and mor
 tags: ["Rust", "Polyglot", "REPL", "Run-Kit", "Tutorial", "Programming"]
 ---
 
-#  Using Run-Kit to Mix Multiple Languages in One Rust Program
-
-<h1 align="center">run</h1>
-
-<p align="center">
-	<strong>Polyglot command runner & smart REPL that lets you script, compile, and iterate in 25+ languages without touching another CLI.</strong>
-</p>
-
-<p align="center">
-  <a href="https://github.com/Esubaalew/run/releases/latest">
-    <img src="https://img.shields.io/github/v/release/Esubaalew/run?style=flat-square&color=orange&logo=github" alt="Latest release" />
-  </a>
-  <img src="https://img.shields.io/badge/release-passing-brightgreen?style=flat-square" alt="Release passing" />
-  <a href="https://docs.rs/run-kit">
-    <img src="https://img.shields.io/badge/docs-passing-brightgreen?style=flat-square&logo=rust" alt="Docs passing" />
-  </a>
-  <a href="https://crates.io/crates/run-kit">
-    <img src="https://img.shields.io/crates/v/run-kit.svg?style=flat-square&logo=rust&color=red" alt="crates.io" />
-  </a>
-</p>
 
 > Built in Rust, Run-Kit is designed for developers who work across multiple languages. It gives you a consistent CLI, persistent REPLs, and batteries-included examples for Python, Rust, Go, JS, R, Julia, and more.
 
@@ -585,6 +565,7 @@ run
 ## Links & Resources
 
 * **Run-Kit GitHub:** [https://github.com/Esubaalew/run](https://github.com/Esubaalew/run)
+* **Run-Kit-analytics GitHub:** [https://github.com/Esubaalew/run-kit-analytics](https://github.com/Esubaalew/run-kit-analytics)
 * **Documentation:** [https://run.esubalew.et/docs/overview](https://run.esubalew.et/docs/overview)
 * **Install via Cargo:** `cargo install run-kit`
 * **Homebrew (macOS):** `brew install https://github.com/Esubaalew/run/releases/latest/download/homebrew-run.rb`
