@@ -155,7 +155,7 @@ export const blogMetadata = generateMetadata({
 
 export const projectsMetadata = generateMetadata({
   title: 'Projects',
-  description: 'A collection of software engineering and AI projects showcasing technical expertise and problem-solving skills.',
+  description: 'Projects by Esubalew Chekol, including Birur (formerly Hisabe), an Android debt and budget tracker, plus Rust, Python, and web work.',
   path: '/projects',
   ogType: 'projects',
 })
